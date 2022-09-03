@@ -1,4 +1,4 @@
-package com.example.HurlBiz2;
+package com.example.HurlBiz2.entidades;
 
 public class Empresa {
     //atributos
