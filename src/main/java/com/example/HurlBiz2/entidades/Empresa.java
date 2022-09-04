@@ -7,16 +7,23 @@ public class Empresa {
     private String telefono;
     private String nit;
 
+    //Nuevo
+    private Empleado empleados;
+
+
     //Constructor
 
-    public Empresa(String nombre, String direccion, String telefono, String nit) {
+    public Empresa(String nombre, String direccion, String telefono, String nit,
+                    Empleado empleados) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
         this.nit = nit;
+        this.empleados = empleados;
     }
 
     //Getters & Setters
+
     public String getNombre() {
         return nombre;
     }
@@ -46,11 +53,25 @@ public class Empresa {
     }
 
     public void setNit(String nit) {
+
         this.nit = nit;
     }
 
+    public Empleado getEmpleados(){
+        return empleados;
+    }
+    public void setEmpleados (Empleado empleados){
+        this.empleados = empleados;
+    }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nombre='" + nombre + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", nit='" + nit + '\'' +
+                ", empleados=" + empleados +
+                '}';
+    }
 }

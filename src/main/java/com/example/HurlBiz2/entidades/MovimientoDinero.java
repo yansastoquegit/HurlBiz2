@@ -19,34 +19,52 @@ public class MovimientoDinero {
     //Setters y Getters
 
     public Integer getMonto() {
+
         return monto;
     }
 
     public void setMonto(Integer monto) {
+
         this.monto = monto;
     }
 
     public Boolean getPositivo() {
+
         return positivo;
     }
 
     public void setPositivo(Boolean positivo) {
+
         this.positivo = positivo;
     }
 
     public String getConcepto() {
+
         return concepto;
     }
 
     public void setConcepto(String concepto) {
+
         this.concepto = concepto;
     }
 
     public String getUsuario() {
+
         return usuario;
     }
 
     public void setUsuario(String usuario) {
+
         this.usuario = usuario;
+    }
+
+    @Override
+    public String toString() {
+        return "MovimientoDinero{" +
+                "monto=" + monto +
+                ", positivo=" + positivo +
+                ", concepto='" + concepto + '\'' +
+                ", usuario='" + usuario + '\'' +
+                '}';
     }
 }
