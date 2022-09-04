@@ -65,4 +65,15 @@ public class Empleado {
     public void setMovimientos(MovimientoDinero movimientos) {
         this.movimientos = movimientos;
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "nombre='" + nombre + '\'' +
+                ", correo='" + correo + '\'' +
+                ", administrador=" + administrador +
+                ", empresa='" + empresa + '\'' +
+                ", movimientos=" + movimientos +
+                '}';
+    }
 }

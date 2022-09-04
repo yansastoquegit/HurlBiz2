@@ -64,8 +64,14 @@ public class Empresa {
         this.empleados = empleados;
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nombre='" + nombre + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", nit='" + nit + '\'' +
+                ", empleados=" + empleados +
+                '}';
+    }
 }
