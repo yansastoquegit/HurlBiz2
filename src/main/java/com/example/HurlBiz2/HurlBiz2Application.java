@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-//@SpringBootApplication
+@SpringBootApplication
+
 public class HurlBiz2Application {
 
 	public static void main(String[] args) {

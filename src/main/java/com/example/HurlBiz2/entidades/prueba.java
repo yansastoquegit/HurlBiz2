@@ -1,2 +1,6 @@
-package com.example.HurlBiz2.entidades;public class prueba {
+package com.example.HurlBiz2.entidades;
+
+public class prueba {
+
+
 }
