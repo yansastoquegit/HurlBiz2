@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-//@SpringBootApplication
+@SpringBootApplication
 public class HurlBiz2Application {
 
 	public static void main(String[] args) {
 		System.out.println("Prueba");
-		//SpringApplication.run(HurlBiz2Application.class, args);
-
+		SpringApplication.run(HurlBiz2Application.class, args);
+		/*
 		MovimientoDinero movimiento1 = new MovimientoDinero(50000, true, "Venta camisa", "Paco");
 		MovimientoDinero movimiento2 = new MovimientoDinero(40000, false, "pago vigilancia", "Pepe");
 
@@ -46,7 +46,7 @@ public class HurlBiz2Application {
 		for (int i = 0; i < listaEmpleados.size(); i++) {
 			System.out.println(listaEmpleados.get(i).toString());
 		}
-
+		*/
 	}
 
 }
