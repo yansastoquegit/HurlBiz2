@@ -4,6 +4,8 @@ package com.example.HurlBiz2.controladores;
 import com.example.HurlBiz2.entidades.Empresa;
 import com.example.HurlBiz2.servicios.ServiciosEmpresas;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -14,6 +16,24 @@ import java.util.List;
 
 @RestController
 public class ControlEmpresas {
+
+    ServiciosEmpresas serviEmpresa;
+
+    //Constructor
+    public ControlEmpresas(ServiciosEmpresas serviEmpresa){
+        this.serviEmpresa = serviEmpresa;
+    }
+
+    @GetMapping("/empresa")
+    public List<Empresa> listaEmpresas(){
+        return this.serviEmpresa.getListaEmpresas();
+    }
+
+    @PostMapping("/empresa")
+    public Empresa crearEmpresa(@RequestBody Empresa emprVar){
+        return  this.serviEmpresa.crearEmpresa(emprVar);
+    }
+
 /*
 //Lo que sigue se utiliza para una visualizacion de prueba, se ve una respuesta sensilla del RestController.
     //Tenemos que hacer un mapeo para poder direccionar lo que nos estan pidiendo, el metodo que sigue se
@@ -32,6 +52,7 @@ public class ControlEmpresas {
  */
     //Creamos un atributo de la clase ServiciosEmpresas para poder importarlo y así relacionar la informacion
 
+    /*
     ServiciosEmpresas ServiEmpresa;
 
     //Constructor del controlador
@@ -50,6 +71,11 @@ public class ControlEmpresas {
     public List<Empresa> VerEmpresas(){
         return this.ServiEmpresa.getListaEmpresas();
     }
+*/
+
+    //Esto es lo nuevo implementando las herramientas del JPA
+
+
 
 
 }

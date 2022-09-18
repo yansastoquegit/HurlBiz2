@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name="movimientodinero")
 public class MovimientoDinero {
     //Atributos
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long Id;
     @Column(name="monto")

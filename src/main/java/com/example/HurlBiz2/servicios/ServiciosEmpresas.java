@@ -2,19 +2,25 @@ package com.example.HurlBiz2.servicios;
 
 import com.example.HurlBiz2.entidades.Empleado;
 import com.example.HurlBiz2.entidades.Empresa;
+import com.example.HurlBiz2.repositorios.repositorioEmpresa;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
+//Convertir está clase en un servicio que se conecta a algo remoto en la nube
 public class ServiciosEmpresas {
-    //Atributos del tipo paciente lo que quiere decir que esto es un objeto
+    //Atributos del tipo Empresas lo que quiere decir que esto es un objeto
+    /*
     Empresa empresa1;
     Empresa empresa2;
     List<Empresa> listaEmpresas;
 
     ServiciosEmpleados emplea = new ServiciosEmpleados();
-
+*/
     //Contructor
+    /*
     public ServiciosEmpresas(){
         //Aqui Se instancia un empleado directamente sin poner los datos ya que el constructor de ServiciosEmpleados
         //No tiene parametros en el contructor
@@ -27,9 +33,24 @@ public class ServiciosEmpresas {
         listaEmpresas.add(empresa2);
     }
 
+     */
+
+    //Utilizando el repositorio
+    private repositorioEmpresa repositorioEmpre;
+
+    //Constructor
+    public ServiciosEmpresas(repositorioEmpresa repositorioEmpre){
+        this.repositorioEmpre = repositorioEmpre;
+    }
+
     //Metodo Getter para obtener la lista de empresas
+    //Metodo para visualizar a partir de un metodo ETet
 
     public List<Empresa> getListaEmpresas() {
-        return this.listaEmpresas;
+        return this.repositorioEmpre.findAll();
+    }
+    //Metodo para crear a partir del metodo POST
+    public Empresa crearEmpresa (Empresa nuevaEmpresa){
+        return this.repositorioEmpre.save(nuevaEmpresa);
     }
 }

@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Empleado {
 
     //Atributos
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long Id;
     @Column(name="nombre")
