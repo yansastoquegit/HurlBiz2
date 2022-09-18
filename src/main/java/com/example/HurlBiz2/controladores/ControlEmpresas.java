@@ -37,6 +37,12 @@ public class ControlEmpresas {
         return this.serviEmpresa.actualEmpresa(id,actEmpresa);
     }
 
+    //Borrar un registro
+    @DeleteMapping("/empresa/{id}")
+    public Empresa eliminarEmpresa(@PathVariable(value = "id") Long id){
+        return this.serviEmpresa.eliminEmpresa(id);
+    }
+
 /*
 //Lo que sigue se utiliza para una visualizacion de prueba, se ve una respuesta sensilla del RestController.
     //Tenemos que hacer un mapeo para poder direccionar lo que nos estan pidiendo, el metodo que sigue se

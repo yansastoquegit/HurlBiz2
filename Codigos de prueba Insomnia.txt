@@ -37,3 +37,14 @@ Este debe arrojar codigo 200, si falla debe sacar 400 o 500 y toca reiniciar el 
 
 Previsualizar
 Debe mostrar la empresa modificada con todos los datos
+-------------------------------------------------------
+Metodo: DELETE
+Direccion: localhost:8080/eliminarempresa/Aqui debe poner el ID del registro que quiere cambiar
+JSON  
+{}
+
+Este debe arrojar codigo 200, si falla debe sacar 400 o 500 y toca reiniciar el servicio
+
+
+Previsualizar
+Debe mostrar la empresa eliminada con todos los datos

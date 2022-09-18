@@ -64,6 +64,15 @@ public class ServiciosEmpresas {
         return this.repositorioEmpre.save(empresaActual);
     }
 
+    //Metodo para eliminar un registro de la DB
+
+    public Empresa eliminEmpresa(Long id){
+        Empresa empresaActual = repositorioEmpre.findById(id).orElseThrow();
+        this.repositorioEmpre.deleteById(id);//Solo con esta linea funciona
+        return empresaActual;//Pero esta muestra lo que se borró.
+
+    }
+
 
 
 }
