@@ -39,7 +39,8 @@ Previsualizar
 Debe mostrar la empresa modificada con todos los datos
 -------------------------------------------------------
 Metodo: DELETE
-Direccion: localhost:8080/eliminarempresa/Aqui debe poner el ID del registro que quiere cambiar
+Direccion: localhost:8080/empresa/Aqui debe poner el ID del registro que quiere cambiar
+
 JSON  
 {}
 
