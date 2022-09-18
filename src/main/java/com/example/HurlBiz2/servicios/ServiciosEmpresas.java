@@ -53,4 +53,17 @@ public class ServiciosEmpresas {
     public Empresa crearEmpresa (Empresa nuevaEmpresa){
         return this.repositorioEmpre.save(nuevaEmpresa);
     }
+
+    //Metodo para actualizar a partir del metodo UP o  PATCH
+    public Empresa actualEmpresa (Long id, Empresa EmprActualiza){
+        Empresa empresaActual = repositorioEmpre.findById(id).orElseThrow();
+        empresaActual.setNombre(EmprActualiza.getNombre());
+        empresaActual.setDireccion(EmprActualiza.getDireccion());
+        empresaActual.setTelefono(EmprActualiza.getTelefono());
+        empresaActual.setNit(EmprActualiza.getNit());
+        return this.repositorioEmpre.save(empresaActual);
+    }
+
+
+
 }

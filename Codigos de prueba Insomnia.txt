@@ -1,0 +1,39 @@
+Metodo: GET
+Direccion: localhost:8080/empresa
+JSON   --Vacio--
+
+Este debe arrojar codigo 200, si falla debe sacar 400 o 500 y toca reiniciar el servicio
+
+Previsualizar
+Debe traer en el listado de elementos de la DB
+-------------------------------------------------------
+
+Metodo: POST
+Direccion: localhost:8080/empresa
+JSON  
+{"nombre":"Nombre_empresa_que_se_va_a_crear",
+ "direccion":"Direccion_empresa_que_se_va_a_crear",
+ "telefono":"Telefono_empresa_que_se_va_a_crear",
+ "nit":"NIT_empresa_que_se_va_a_crear",
+ "empleados":null}
+
+Este debe arrojar codigo 200, si falla debe sacar 400 o 500 y toca reiniciar el servicio
+
+
+Previsualizar
+Debe mostrar la empresa creada con todos los datos
+-------------------------------------------------------
+Metodo: PUT
+Direccion: localhost:8080/empresa/Aqui debe poner el ID del registro que quiere cambiar
+JSON  
+{"nombre":"Nombre_empresa_que_se_va_a_cambiar",
+ "direccion":"Direccion_empresa_que_se_va_a_cambiar",
+ "telefono":"Telefono_empresa_que_se_va_a_cambiar",
+ "nit":"NIT_empresa_que_se_va_a_cambiar",
+ "empleados":null}
+
+Este debe arrojar codigo 200, si falla debe sacar 400 o 500 y toca reiniciar el servicio
+
+
+Previsualizar
+Debe mostrar la empresa modificada con todos los datos
