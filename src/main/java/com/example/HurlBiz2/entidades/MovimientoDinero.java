@@ -1,13 +1,27 @@
 package com.example.HurlBiz2.entidades;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="movimientodinero")
 public class MovimientoDinero {
     //Atributos
+    @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long Id;
+    @Column(name="monto")
     private Integer monto;
+    @Column(name="positivo")
     private Boolean positivo;
+    @Column(name="concepto")
     private String concepto;
+    @Column(name="usuario")
     private String usuario;
 
     //Constructor
+
+    public MovimientoDinero() {
+    }
 
     public MovimientoDinero(Integer monto, Boolean positivo, String concepto, String usuario) {
         this.monto = monto;
