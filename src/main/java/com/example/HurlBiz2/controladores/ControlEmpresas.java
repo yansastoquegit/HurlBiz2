@@ -1,13 +1,10 @@
 package com.example.HurlBiz2.controladores;
 
-
 import com.example.HurlBiz2.entidades.Empresa;
 import com.example.HurlBiz2.servicios.ServiciosEmpresas;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-
 //se deben convertir esta clase en un controlador escribiendo restcontroller, para que sea un controlador de
 // requerimientos de usuario para Sprint Boot utilizando los Rest que son las peticiones de cliente.
 
@@ -20,18 +17,22 @@ public class ControlEmpresas {
     public ControlEmpresas(ServiciosEmpresas serviEmpresa){
         this.serviEmpresa = serviEmpresa;
     }
-    //Leer registros
+
+
+    //Leer registros read metod Get
     @GetMapping("/empresa")
     public List<Empresa> listaEmpresas(){
         return this.serviEmpresa.getListaEmpresas();
     }
-    //Escribir registros
+
+    //Esto creacion de  registros
     @PostMapping("/empresa")
-    public Empresa crearEmpresa(@RequestBody Empresa emprVar){
+    public Empresa crearEmpresa(@RequestBody Empresa emprVar)
+    {
         return  this.serviEmpresa.crearEmpresa(emprVar);
     }
 
-    //Editar un registro
+    //Editar un registro, metodo put
     @PutMapping("/empresa/{id}")
     public Empresa actualizarEmpresa (@PathVariable Long id, @RequestBody Empresa actEmpresa){
         return this.serviEmpresa.actualEmpresa(id,actEmpresa);
